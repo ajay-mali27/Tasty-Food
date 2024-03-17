@@ -1,0 +1,122 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="LoginContainer">
+             <center>
+                    <div class="LoginPage">
+                       <div class="LoginMain">
+                        <a href="/index.html"><i id='cross' style=color:black; class="bi bi-x"></i></a>
+                        <div class="Login-box">
+                            <p id="LoginP1">Login</p> 
+                        <input type="numer" placeholder="Phone" id="LoginPageA" style=" outline: none; " >
+                        <button id="LoginOtp">Send One Time Password</button>
+                        <p id="LoginP2">or</p>
+        
+                        <button id="LoginEmail" class="login-icons"><i class="bi bi-envelope-fill"></i>Continue With Email</button>
+                        <button id="LoginGmail" class="login-icons"><i class="bi bi-google"></i>Continue With Google</button>
+                        </div>
+                       </div>
+                        
+                    </div>
+        
+                </center>
+            </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validateNumber() {
+            var phoneNumber = document.getElementById("LoginPageA").value;
+
+            // Regular expression to check if the input is a valid number
+            var numberPattern = /^\d+$/;
+
+            if (!numberPattern.test(phoneNumber)) {
+                alert("Please enter a valid phone number.");
+                return false;
+            }
+
+            // Additional validation logic can be added here if needed
+
+            // Show a confirmation message
+            alert("Login completed successfully!");
+
+            return true;
+        }
+
+        function continueWithEmail() {
+            // Add logic to continue with email
+            alert("Continue with Email logic goes here.");
+        }
+
+        function continueWithGoogle() {
+            // Add logic to continue with Google
+            alert("Continue with Google logic goes here.");
+        }
+
+        
+        function validateNumber() {
+            // your existing validation logic
+            // ...
+
+            // Redirect to the welcome page
+            window.location.href = "welcome-email.html"; // Change to "welcome-google.html" as needed
+        }
+
+        function continueWithEmail() {
+            // your existing logic
+            // ...
+
+            // Redirect to the welcome page
+            window.location.href = "welcome-email.html";
+        }
+
+        function continueWithGoogle() {
+            // your existing logic
+            // ...
+
+            // Redirect to the welcome page
+            window.location.href = "welcome-google.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="LoginContainer">
+        <center>
+            <div class="LoginPage">
+                <div class="LoginMain">
+                    <a href="/index.html"><i id='cross' style="color:black;" class="bi bi-x"></i></a>
+                    <div class="Login-box">
+                        <p id="">Login</p> 
+                        <input type="text" placeholder="Phone" id="LoginPageA" style="outline: none;">
+                        <button id="LoginOtp" onclick="return validateNumber()">Login</button>
+                        <p id="LoginP2">or</p>
+        
+                        <button id="LoginEmail" class="login-icons" onclick="continueWithEmail()"><i class="bi bi-envelope-fill"></i>Continue With Email</button>
+                        <button id="LoginGmail" class="login-icons" onclick="continueWithGoogle()"><i class="bi bi-google"></i>Continue With Google</button>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </div>
+</body>
+</html>
+
+
+
